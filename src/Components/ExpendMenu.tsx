@@ -63,22 +63,11 @@ export default function ExpendMenu({ isMenuOpen }: { isMenuOpen: boolean }) {
                                     </>
                                    )
                                })
-                           }
-                            
-                             
+                           } 
                         </div>
-
-
                     </div>
-
-
                 </div>
-
-
-
             </motion.div>
-
-
         </>
     )
 }
