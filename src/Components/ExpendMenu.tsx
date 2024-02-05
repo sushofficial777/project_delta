@@ -47,12 +47,12 @@ export default function ExpendMenu({ isMenuOpen }: { isMenuOpen: boolean }) {
                     <div className=" lg:w-[50%] md:w-[50%] w-0 h-full  "></div>
                     <div className=" lg:w-[50%] px-10 pt-10 md:w-[50%] w-full  h-full  ">
 
-                        <div className=" mt-[8rem]    ">
+                        <div className=" mt-[8rem] mix-blend-difference    ">
                            {
                                menuItems.map((item:any, index:number) => {
                                    return (
                                     <>
-                                     <Link key={index} style={{overflow:'hidden'}} href={'/'} className=' mb-4  bg-white  text-[40px] md:text-[50px] relative  text-white  lg:text-[70px] font-extrabold uppercase ' >
+                                     <Link key={index} style={{overflow:'hidden'}} href={'/'} className=' mb-4    text-[40px] md:text-[50px] relative   text-white  lg:text-[70px] font-extrabold uppercase ' >
                                 
                                 <p  
                                 className='   ' >{item.name} </p>
