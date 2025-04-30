@@ -2,8 +2,12 @@
 
 import { Inter } from "next/font/google";
 import "./globals.css";
+import OverLay from "@/Components/OverLay";
+import { useEffect, useState } from "react";
+
 
 const inter = Inter({ subsets: ["latin"] });
+
 
 
 import Nvbar from "@/Components/NavBar";
@@ -14,6 +18,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [overlayVisible, setOverlayVisible] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setOverlayVisible(false);
+    }, 5000);
+  }, [])
+
+
   return (
     <html lang="en">
       <head>
@@ -25,9 +38,15 @@ export default function RootLayout({
 
       </head>
       <body className={inter.className}>
-        <BrandTitle />
-        <SmoothScroll />
-        <Nvbar />
+
+        {
+          overlayVisible ? <OverLay /> : <>
+            <BrandTitle />
+            <SmoothScroll />
+            <Nvbar />
+          </>
+        }
+
 
         {children}
       </body>

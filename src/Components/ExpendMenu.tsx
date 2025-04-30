@@ -31,12 +31,13 @@ export default function ExpendMenu({ isMenuOpen }: { isMenuOpen: boolean }) {
     const controls = useAnimation();
 
     useEffect(() => {
-        controls.start(isMenuOpen ? { width: '100%', top: 0, height: '100vh', borderRadius: '', opacity: 1, } : { width: "100%", top: "-100%", height: "100vh", borderRadius: '', opacity: 1, });
+        controls.start(isMenuOpen ? { width: '100%', top: 0, height: '100vh', borderRadius: '', opacity: 1, } : { width: "100%", top: "-100%", height: "100vh", borderRadius: '', opacity: 0, });
     }, [isMenuOpen, controls]);
 
     return (
         <>
             <motion.div
+            initial={{opacity:0}}
                 animate={controls}
                 transition={{ type: 'tween', duration: .8, ease: "circInOut" }}
                 className="fixed z-[100] top-0 left-0   bg-slate-300 overflow-hidden "
