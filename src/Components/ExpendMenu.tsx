@@ -24,7 +24,7 @@ export default function ExpendMenu({ isMenuOpen }: { isMenuOpen: boolean }) {
 
 
 
-]
+    ]
 
     const menuRef = useRef(null);
 
@@ -37,7 +37,7 @@ export default function ExpendMenu({ isMenuOpen }: { isMenuOpen: boolean }) {
     return (
         <>
             <motion.div
-            initial={{opacity:0}}
+                initial={{ opacity: 0 }}
                 animate={controls}
                 transition={{ type: 'tween', duration: .8, ease: "circInOut" }}
                 className="fixed z-[100] top-0 left-0   bg-slate-300 overflow-hidden "
@@ -49,22 +49,21 @@ export default function ExpendMenu({ isMenuOpen }: { isMenuOpen: boolean }) {
                     <div className=" lg:w-[50%] px-10 pt-10 md:w-[50%] w-full  h-full  ">
 
                         <div className=" mt-[8rem] mix-blend-difference    ">
-                           {
-                               menuItems.map((item:any, index:number) => {
-                                   return (
-                                    <>
-                                     <Link key={index} style={{overflow:'hidden'}} href={'/'} className=' mb-4    text-[40px] md:text-[50px] relative   text-white  lg:text-[70px] font-extrabold uppercase ' >
-                                
-                                <p  
-                                className='   ' >{item.name} </p>
-                                {/* <div className=" w-full h-[2px] absolute left-0 bottom-2 rounded-sm bg-white "></div> */}
-                           
-                            </Link>
-                                    
-                                    </>
-                                   )
-                               })
-                           } 
+                            {
+                                menuItems.map((item: any, index: number) => {
+                                    return (
+                                        <>
+                                            <Link key={index} style={{ overflow: 'hidden' }} href={'/'} className=' mb-4    text-[40px] md:text-[50px] relative   text-white  lg:text-[70px] font-extrabold uppercase ' >
+
+                                                <p
+                                                    className='   ' >{item.name} </p>
+
+                                            </Link>
+
+                                        </>
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                 </div>

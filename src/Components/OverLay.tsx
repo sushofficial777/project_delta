@@ -63,7 +63,7 @@ export default function OverLay() {
                                                 key={index}
                                                 initial={{ opacity: 1,x: `${randomLeftPercentage}%` }}
                                                 animate={{ opacity: 1 ,x: 0 }}
-                                                transition={{ duration: .7, delay: 2 }}
+                                                transition={{ duration: .7, delay: 1 }}
                                                 viewport={{ once: true }}
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width= {'100%'}
@@ -71,7 +71,6 @@ export default function OverLay() {
                                                 className="text-white  "
                                             >
                                                 <rect width="100%" height="100%" fill="currentColor" />
-                                               
                                             </motion.svg>
                                           
                                         </>
